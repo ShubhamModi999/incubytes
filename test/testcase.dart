@@ -64,13 +64,21 @@ void main() {
   });
   test('String input ', () async{
     //Arrange
-    final s = StringCalc("//[**]\n8**-1**-1");
+    final s = StringCalc("//[**]\n8**-1**-2");
+    //Act
+    s.add();
+    //Expect
+    expect(s.sum,5);
+
+  });
+  test('String input ', () async{
+    //Arrange
+    final s = StringCalc("//[*]\n3*1001*3");
     //Act
     s.add();
     //Expect
     expect(s.sum,6);
 
   });
-
 
 }

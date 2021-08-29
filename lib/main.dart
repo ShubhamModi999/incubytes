@@ -43,8 +43,9 @@ class Calc {
       if (num2 < 0) {
         negative.add(num2);
       }
-      sumele = sumele + num2;
-
+      if (num2 <= 1000) {
+        sumele = sumele + num2;
+      }
     }
 
     try {
