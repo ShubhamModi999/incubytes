@@ -11,6 +11,15 @@ class StringCalc {
     Calc c = new Calc();
     if (inputtemp.isEmpty || inputtemp.length<4) {
       sum=0;
+    }else if (input.startsWith("//")) {
+      String delimiter;
+
+      int delimiterindex = input.indexOf("[") + 1;
+      int enddeliindex = input.indexOf("]");
+      delimiter = input.substring(delimiterindex, enddeliindex);
+
+      String num1 = input.substring(input.indexOf(",") + 1);
+      sum = c.add(delimiter, num1);
     }else if (input.contains(",")) {
       String deli = ",";
       sum=c.add(deli,input);
