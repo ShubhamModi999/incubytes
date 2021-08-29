@@ -37,13 +37,24 @@ class Calc {
   int add(String delimiter, String number) {
 
     var arraynum = number.split(delimiter);
+    List negative = [];
     for (var i = 0; i < arraynum.length; i = i + 1) {
       num2 = int.parse(arraynum[i]);
+      if (num2 < 0) {
+        negative.add(num2);
+      }
       sumele = sumele + num2;
 
     }
 
-
+    try {
+      if (negative.length > 0) {
+        print("Negatives not allowed: ");
+        print(negative);
+      }
+    } catch (e) {
+      print(e);
+    }
     return sumele;
   }
 }

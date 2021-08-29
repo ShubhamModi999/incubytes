@@ -62,5 +62,15 @@ void main() {
     expect(s.sum,11);
 
   });
+  test('String input ', () async{
+    //Arrange
+    final s = StringCalc("//[**]\n8**-1**-1");
+    //Act
+    s.add();
+    //Expect
+    expect(s.sum,6);
+
+  });
+
 
 }
