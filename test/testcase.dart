@@ -81,4 +81,15 @@ void main() {
 
   });
 
+  test('String input ', () async{
+    //Arrange
+    final s = StringCalc("//[***]\n3***5***3");
+    //Act
+    s.add();
+    //Expect
+    expect(s.sum,11);
+
+  });
+
+
 }
