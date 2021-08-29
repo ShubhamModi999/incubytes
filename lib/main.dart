@@ -7,5 +7,8 @@ class StringCalc {
   String get inputtemp => _inputtemp;
 
   void add() {
+    if (inputtemp.isEmpty || inputtemp.length<4) {
+      sum=0;
+    }
   }
 }
