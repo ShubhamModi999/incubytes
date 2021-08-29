@@ -26,4 +26,12 @@ void main() {
     //Expect
     expect(s.sum, 0);
   });
+  test('String input ', () async {
+    //Arrange
+    final s = StringCalc("4,3\n3");
+    //Act
+    s.add();
+    //Expect
+    expect(s.sum, 10);
+  });
 }
